@@ -98,6 +98,9 @@ input[type="color"]:focus,
     color: #10724F;
     padding-top: 20px;
 } 
+.bias-type-indicator{
+  padding-left: 50px;
+}
 .karla-font {
   font-style: Bold;
   font-family: 'Karla';
@@ -109,7 +112,7 @@ input[type="color"]:focus,
 }
 .example-box{
     width: 1000px;
-    height: 550px;
+    height: 500px;
     background: transparent;
     position: relative;
     margin: 20px auto;
@@ -433,6 +436,9 @@ a:hover {
   font-family: inherit;
   text-rendering: auto;
   text-align: center;
+  :visited {
+    color: #A5DCB2
+  }
 }
 .image-upload-controls .btn-default {
   border: 1px solid var(--secondary);
@@ -565,4 +571,34 @@ button a:visited {
   .discourse-back-button {
     opacity: 0;
   }
+}
+//subcategories lists
+.no-description:nth-child(n+4) {
+  display: none;
+}
+//subcategories boxes on homepage
+.category.category-box:nth-child(n+7) {
+  display: none;
+}
+
+.expand, .collapse {
+    float: right;
+    display: inline-flex;
+}
+
+.show-all-projects {
+    float: right;
+}
+
+.navigation-categories {
+  // items being hidden from home page
+  .subs-btn {
+    display:none;
+  }
+}
+
+ul.bias-type li{
+  list-style: none;
+  display: inline;
+  margin-left: 10px;
 }

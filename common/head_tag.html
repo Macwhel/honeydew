@@ -1,22 +1,23 @@
-<script type="text/x-handlebars" data-template-name="/connectors/extra-nav-item/dontworry">
+<!-- Temporarily commented out -->
+<!-- <script type="text/x-handlebars" data-template-name="/connectors/extra-nav-item/dontworry">
   <a href="/" class> All Projects </a>
   <a href="/tag/hypothesis" class> All Hypotheses </a>
-</script>
+</script> -->
 
 <script type="text/discourse-plugin" version="0.8">
   api.registerConnectorClass("below-site-header", "custom-homepage", {
     setupComponent(args, component) {
-     var topMenuRoutes = 
+     var topMenuRoutes =
         component.siteSettings.top_menu.split('|')
         .map(function(route) {return '/' + route});
      var homeRoute = topMenuRoutes[0];
      api.onPageChange((url) => {
-        if (url === "/" || url === homeRoute ){ 
-          document.querySelector("html").classList.add("custom-homepage"); 
-          component.set("displayCustomHomepage", true); 
-        } else {  
-          document.querySelector("html").classList.remove("custom-homepage"); 
-          component.set("displayCustomHomepage", false); 
+        if (url === "/" || url === homeRoute ){
+          document.querySelector("html").classList.add("custom-homepage");
+          component.set("displayCustomHomepage", true);
+        } else {
+          document.querySelector("html").classList.remove("custom-homepage");
+          component.set("displayCustomHomepage", false);
         }
       });
     }
@@ -37,12 +38,12 @@
 </script>
 
 <script type="text/x-handlebars" data-template-name="/connectors/below-site-header/custom-homepage">
-    {{#if displayCustomHomepage}} 
+    {{#if displayCustomHomepage}}
         <div class="custom-homepage-wrapper wrap">
             <div class="tc-mid-section-1">
                 <div class="tc-mid-box-left">
                     <div class="tc-text">
-                        <h1 class="tc-section-heading">Create a future with fair technology for everyone with everyone</h1>
+                        <h1 class="tc-section-heading karla-font">Create a future with fair technology for everyone with everyone</h1>
                         <div class="tc-section-blurb">We harness the power of the crowds, specifically you, to improve machine learning and algorithmic fairness. Create an account to join our community, where you can audit biases and participate in discussions!</div>
                         <button class="btn btn-lp">
                             <a href="#direct" class="btn-ct">See all projects</a>
@@ -60,8 +61,8 @@
             </div>
             <div class="landing-part-2">
                 <div class="lp2-text">
-                    <div class="little-green text-put-center">What is algorithmic bias?</div>
-                    <h1 class="text-put-center karla-font lp2-title-black">Algorithmic bias exists in everyday<br>digital products and services</h1>
+                    <div class="text-put-center karla-font lp2-title-black">What is algorithmic bias?</div>
+                    <h1 class="little-green text-put-center">Algorithmic bias exists in everyday<br>digital products and services</h1>
                 </div>
                 <div class="example-box">
                     <div class="left-example-box">
@@ -82,7 +83,17 @@
                             <a href="/tag/gender-bias" target="_blank" class="btn-ct-lp2">View Projects on Gender Bias -></a>
                         </button>
                     </div>
+            
                 </div>
+                <div class="bias-type-indicator">
+                  <h3 class="little-green">Type of Bias</h3>
+                  <ul class="bias-type">
+                      <li><span style="background-color: #92278F; width:10px; height:10px; display:inline-block;"></span>  Racial Bias</li>
+                      <li><span style="background-color: #0E76BD; width:10px; height:10px; display:inline-block;"></span>  Gender Bias</li>
+                      <li><span style="background-color: #BF1E2E; width:10px; height:10px; display:inline-block;"></span>  Sexuality Bias</li>
+                      <li><span style="background-color: #F1592A; width:10px; height:10px; display:inline-block;"></span>  Age Bias</li>
+                  </ul>
+              </div>
             </div>
             <div id="direct" name="direct"></div>
         </div>
