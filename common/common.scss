@@ -167,6 +167,12 @@ input[type="color"]:focus,
   }
 }
 
+.staff .category {
+  .d-button-label {
+    display:none;
+  }
+}
+
 .navigation-categories .search-banner {
   @include border-radius;
   height: 350px;
