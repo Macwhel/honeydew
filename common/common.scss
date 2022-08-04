@@ -167,7 +167,7 @@ input[type="color"]:focus,
   }
 }
 
-.staff, .category, :not(.categories-list) {
+.staff, .category, body:not(.categories-list) {
   button#create-topic {
     display:none;
   }
