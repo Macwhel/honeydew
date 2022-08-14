@@ -169,8 +169,10 @@ input[type="color"]:focus,
 
 .subcategory {
   :hover {
+    // Hover color
     color: #000075;
     :after{
+      // For the underline
       transform: scaleX(1);
       transform-origin: bottom left;
     }
@@ -183,7 +185,7 @@ input[type="color"]:focus,
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #0087ca;
+    background-color: #0087ca; // underline color
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
