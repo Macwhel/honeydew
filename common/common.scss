@@ -169,7 +169,7 @@ input[type="color"]:focus,
 
 .subcategory {
   :hover {
-    color:aqua;
+    color: #0000FF;
     :after{
       transform: scaleX(1);
       transform-origin: bottom left;
@@ -183,7 +183,7 @@ input[type="color"]:focus,
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #0000FF;
+    background-color: #0087ca;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
