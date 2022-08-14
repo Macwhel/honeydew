@@ -167,6 +167,28 @@ input[type="color"]:focus,
   }
 }
 
+.subcategory {
+  :hover {
+    color:aqua;
+    :after{
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+  :after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+}
+
 .staff, .category, body:not(.categories-list) {
   button#create-topic {
     display:none;
