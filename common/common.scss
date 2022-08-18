@@ -160,7 +160,7 @@ input[type="color"]:focus,
 }
 
 // Preventing item from being seen in the home page
-.navigation-categories {
+.navigation-categories, .categories-list {
   // items being hidden from home page
   button#create-topic, .dontworry, .category-drop-header, .subs-btn {
     display:none;
@@ -190,6 +190,7 @@ input[type="color"]:focus,
     transition: transform 0.25s ease-out;
   }
 }
+
 
 .navigation-categories .search-banner {
   @include border-radius;
