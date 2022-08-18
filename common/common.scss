@@ -163,7 +163,7 @@ input[type="color"]:focus,
 .navigation-categories {
   // items being hidden from home page
   button#create-topic, .dontworry, .category-drop-header, .subs-btn {
-    //display:none;
+    display:none;
   }
 }
 
@@ -188,12 +188,6 @@ input[type="color"]:focus,
     background-color: #0087ca; // underline color
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
-  }
-}
-
-.staff, .category, body:not(.categories-list) {
-  button#create-topic {
-    display:none;
   }
 }
 
