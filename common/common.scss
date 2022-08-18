@@ -163,7 +163,7 @@ input[type="color"]:focus,
 .navigation-categories {
   // items being hidden from home page
   button#create-topic, .dontworry, .category-drop-header, .subs-btn {
-    display:none;
+    //display:none;
   }
 }
 
@@ -618,13 +618,6 @@ button a:visited {
 
 .show-all-projects {
     float: right;
-}
-
-.navigation-categories {
-  // items being hidden from home page
-  .subs-btn {
-    display:none;
-  }
 }
 
 ul.bias-type li{
