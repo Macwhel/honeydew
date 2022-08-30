@@ -100,6 +100,7 @@ input[type="color"]:focus,
 } 
 .bias-type-indicator{
   padding-left: 50px;
+  padding-top: 45px;
 }
 .karla-font {
   font-style: Bold;
@@ -121,6 +122,20 @@ input[type="color"]:focus,
 
 .ref-links{
   padding-top: 30px;
+}
+
+.ref-links a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.ref-links-lp2{
+  padding-top: 10px;
+}
+
+.ref-links-lp2 a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
 }
 
 #img-lp2 {
@@ -159,38 +174,19 @@ input[type="color"]:focus,
     font-size: 14px;
 }
 
-// Preventing item from being seen
-.navigation-categories, .categories-list {
-  // items being hidden
-  button#create-topic, .category-drop-header {
+// Preventing item from being seen in the home page
+.navigation-categories {
+  // items being hidden from home page
+  button#create-topic, .dontworry, .category-drop-header {
     display:none;
   }
 }
 
-.subcategory {
-  :hover {
-    // Hover color
-    color: #000075;
-    :after{
-      // For the underline
-      transform: scaleX(1);
-      transform-origin: bottom left;
-    }
-  }
-  :after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #0087ca; // underline color
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
+.categories-list {
+  button#create-topic {
+    display:none;
   }
 }
-
 
 .navigation-categories .search-banner {
   @include border-radius;
@@ -440,12 +436,9 @@ a:hover {
 .btn-ct-lp2 {
   background-repeat:no-repeat;
   border: none;
-  color: #006400;
+  color: #10724F;
   cursor: pointer;
   background-color: transparent;
-  :visited {
-    color: #A5DCB2
-  }
 }
 
 .btn-ref {
@@ -456,15 +449,21 @@ a:hover {
   background-repeat:no-repeat;
   background-color: transparent;
   border: none;
-  color: #006400;
+  color: #10724F;
   overflow: visible;
   font-family: inherit;
   text-rendering: auto;
   text-align: center;
-  :visited {
-    color: #A5DCB2
-  }
+  // :visited {
+  //   color: #A5DCB2
+  // }
 }
+
+.btn-lp2 a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
 .image-upload-controls .btn-default {
   border: 1px solid var(--secondary);
   .fa {
@@ -509,7 +508,7 @@ summary.select-kit-header.single-select-header.dropdown-select-box-header {
 .tc-mid-section-1 {
   padding-top: 20;
   border-top: 20;
-  height: 350px;
+  height: 500px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -606,17 +605,69 @@ button a:visited {
   display: none;
 }
 
-.expand, .collapse {
+.expand {
     float: right;
     display: inline-flex;
 }
 
 .show-all-projects {
     float: right;
+    display: inline-flex;
+}
+
+.subcategory {
+  :hover {
+    // Hover color
+    color: #000075;
+    :after{
+      // For the underline
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+  :after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca; // underline color
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
 }
 
 ul.bias-type li{
   list-style: none;
   display: inline;
   margin-left: 10px;
+}
+
+li[title="topics with recent posts"] {
+  display: none;
+}
+li[title="the most active topics in the last year, month, week or day"] {
+  display: none;
+}
+.category-breadcrumb .badge-wrapper .badge-category .category-name {
+  width: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#site-text-logo.text-logo {
+    color: #10724F;
+}
+
+.category-navigation ol > li:first-child { display: none; }
+
+#reply-control .with-tags .category-input {
+  display: none;
+}
+
+#reply-control .mini-tag-chooser {
+  margin: 0 0 8px 0px;
 }
