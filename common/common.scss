@@ -162,7 +162,7 @@ input[type="color"]:focus,
 // Preventing item from being seen
 .navigation-categories, .categories-list {
   // items being hidden
-  button#create-topic, .dontworry, .category-drop-header {
+  button#create-topic, .category-drop-header {
     display:none;
   }
 }
